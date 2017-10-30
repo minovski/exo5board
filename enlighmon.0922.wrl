@@ -1,0 +1,297 @@
+#VRML V2.0 utf8
+
+# NAME  : enlighmon.wrl
+# TITLE : ENLIGHMON 3D Image
+
+PROTO G_Baloon [
+  field SFVec3f Translation 0 0 0
+  field SFFloat Radius 0
+]{
+  Transform {
+    translation IS Translation
+    children [
+      Shape {
+        appearance Appearance { 
+          material Material { diffuseColor 0.5 1 0.5 }
+        } 
+        geometry Sphere { radius IS Radius } 
+      } 
+    ] 
+  }
+}
+PROTO W_Baloon [
+  field SFVec3f Translation 0 0 0
+  field SFFloat Radius 0
+]{
+  Transform {
+    translation IS Translation
+    children [
+      Shape {
+        appearance Appearance { 
+          material Material { diffuseColor 1 1 1 } 
+        } 
+        geometry Sphere { radius IS Radius } 
+      } 
+    ] 
+  }
+}
+PROTO R_Baloon [
+  field SFVec3f Translation 0 0 0
+  field SFFloat Radius 0
+]{
+  Transform {
+    translation IS Translation
+    children [
+      Shape {
+        appearance Appearance { 
+          material Material { diffuseColor 1 0 0 } 
+        } 
+        geometry Sphere { radius IS Radius } 
+      } 
+    ] 
+  }
+}
+PROTO Eye_Baloon [
+  field SFVec3f Translation 0 0 0
+  field SFFloat Radius 0
+]{
+  Transform {
+    translation IS Translation
+    children [
+      Shape {
+        appearance Appearance { 
+          material Material { diffuseColor 1 1 1 } 
+          texture ImageTexture {
+            url "img/eye.png"
+            repeatS FALSE
+            repeatT FALSE
+          }
+        } 
+        geometry Sphere { radius IS Radius } 
+      } 
+    ] 
+  }
+}
+PROTO R_whiskers_Baloon [
+  field SFVec3f Translation 0 0 0
+  field SFFloat Radius 0
+]{
+  Transform {
+    translation IS Translation
+    children [
+      Shape {
+        appearance Appearance { 
+          material Material { diffuseColor 1 1 1 } 
+          texture ImageTexture {
+            url "img/r_whiskers.png"
+            repeatS FALSE
+            repeatT FALSE
+          }
+        } 
+        geometry Sphere { radius IS Radius } 
+      } 
+    ] 
+  }
+}
+PROTO L_whiskers_Baloon [
+  field SFVec3f Translation 0 0 0
+  field SFFloat Radius 0
+]{
+  Transform {
+    translation IS Translation
+    children [
+      Shape {
+        appearance Appearance { 
+          material Material { diffuseColor 1 1 1 } 
+          texture ImageTexture {
+            url "img/l_whiskers.png"
+            repeatS FALSE
+            repeatT FALSE
+          }
+        } 
+        geometry Sphere { radius IS Radius } 
+      } 
+    ] 
+  }
+}
+
+#DEF Polator ColorInterpolator {
+#  key [0, .2, .4, .5, .6, .8, 1]
+#  keyValue [0.2 1 0.2 , 0.4 1 0.4, 0.6 1 0.6 , 0.7 1 0.7 , 0.6 1 0.6 , 0.4 1 0.4 , 0.2 1 0.2]
+#}
+#DEF Sensor TimeSensor {
+#  loop TRUE
+#  cycleInterval 1
+#  stopTime -1
+#}
+#ROUTE Sensor.fraction_changed TO Polator.set_fraction
+#ROUTE Polator.value_changed TO G_Mat.set_diffuseColor
+
+
+# 一段目
+W_Baloon{ Translation  0.174 0.000  0.985 Radius 0.2 }
+W_Baloon{ Translation  0.500 0.000  0.866 Radius 0.2 }
+W_Baloon{ Translation  0.766 0.000  0.643 Radius 0.2 }
+G_Baloon{ Translation  0.940 0.000  0.342 Radius 0.2 }
+G_Baloon{ Translation  1.000 0.000  0.000 Radius 0.2 }
+G_Baloon{ Translation  0.940 0.000 -0.342 Radius 0.2 }
+G_Baloon{ Translation  0.766 0.000 -0.643 Radius 0.2 }
+G_Baloon{ Translation  0.500 0.000 -0.866 Radius 0.2 }
+G_Baloon{ Translation  0.174 0.000 -0.985 Radius 0.2 }
+G_Baloon{ Translation -0.174 0.000 -0.985 Radius 0.2 }
+G_Baloon{ Translation -0.500 0.000 -0.866 Radius 0.2 }
+G_Baloon{ Translation -0.766 0.000 -0.643 Radius 0.2 }
+G_Baloon{ Translation -0.940 0.000 -0.342 Radius 0.2 }
+G_Baloon{ Translation -1.000 0.000  0.000 Radius 0.2 }
+G_Baloon{ Translation -0.940 0.000  0.342 Radius 0.2 }
+W_Baloon{ Translation -0.766 0.000  0.643 Radius 0.2 }
+W_Baloon{ Translation -0.500 0.000  0.866 Radius 0.2 }
+W_Baloon{ Translation -0.174 0.000  0.985 Radius 0.2 }
+# 二段目
+W_Baloon{ Translation  0.174 0.300  0.985 Radius 0.2 }
+W_Baloon{ Translation  0.500 0.300  0.866 Radius 0.2 }
+W_Baloon{ Translation  0.766 0.300  0.643 Radius 0.2 }
+G_Baloon{ Translation  0.940 0.300  0.342 Radius 0.2 }
+G_Baloon{ Translation  1.000 0.300  0.000 Radius 0.2 }
+G_Baloon{ Translation  0.940 0.300 -0.342 Radius 0.2 }
+G_Baloon{ Translation  0.766 0.300 -0.643 Radius 0.2 }
+G_Baloon{ Translation  0.500 0.300 -0.866 Radius 0.2 }
+G_Baloon{ Translation  0.174 0.300 -0.985 Radius 0.2 }
+G_Baloon{ Translation -0.174 0.300 -0.985 Radius 0.2 }
+G_Baloon{ Translation -0.500 0.300 -0.866 Radius 0.2 }
+G_Baloon{ Translation -0.766 0.300 -0.643 Radius 0.2 }
+G_Baloon{ Translation -0.940 0.300 -0.342 Radius 0.2 }
+G_Baloon{ Translation -1.000 0.300  0.000 Radius 0.2 }
+G_Baloon{ Translation -0.940 0.300  0.342 Radius 0.2 }
+W_Baloon{ Translation -0.766 0.300  0.643 Radius 0.2 }
+W_Baloon{ Translation -0.500 0.300  0.866 Radius 0.2 }
+W_Baloon{ Translation -0.174 0.300  0.985 Radius 0.2 }
+# 三段目
+W_Baloon{ Translation  0.174 0.600  0.985 Radius 0.2 }
+W_Baloon{ Translation  0.500 0.600  0.866 Radius 0.2 }
+W_Baloon{ Translation  0.766 0.600  0.643 Radius 0.2 }
+G_Baloon{ Translation  0.940 0.600  0.342 Radius 0.2 }
+G_Baloon{ Translation  1.000 0.600  0.000 Radius 0.2 }
+G_Baloon{ Translation  0.940 0.600 -0.342 Radius 0.2 }
+G_Baloon{ Translation  0.766 0.600 -0.643 Radius 0.2 }
+G_Baloon{ Translation  0.500 0.600 -0.866 Radius 0.2 }
+G_Baloon{ Translation  0.174 0.600 -0.985 Radius 0.2 }
+G_Baloon{ Translation -0.174 0.600 -0.985 Radius 0.2 }
+G_Baloon{ Translation -0.500 0.600 -0.866 Radius 0.2 }
+G_Baloon{ Translation -0.766 0.600 -0.643 Radius 0.2 }
+G_Baloon{ Translation -0.940 0.600 -0.342 Radius 0.2 }
+G_Baloon{ Translation -1.000 0.600  0.000 Radius 0.2 }
+G_Baloon{ Translation -0.940 0.600  0.342 Radius 0.2 }
+W_Baloon{ Translation -0.766 0.600  0.643 Radius 0.2 }
+W_Baloon{ Translation -0.500 0.600  0.866 Radius 0.2 }
+W_Baloon{ Translation -0.174 0.600  0.985 Radius 0.2 }
+# 四段目
+W_Baloon{ Translation  0.174 0.900  0.985 Radius 0.2 }
+W_Baloon{ Translation  0.500 0.900  0.866 Radius 0.2 }
+W_Baloon{ Translation  0.766 0.900  0.643 Radius 0.2 }
+G_Baloon{ Translation  0.940 0.900  0.342 Radius 0.2 }
+G_Baloon{ Translation  1.000 0.900  0.000 Radius 0.2 }
+G_Baloon{ Translation  0.940 0.900 -0.342 Radius 0.2 }
+G_Baloon{ Translation  0.766 0.900 -0.643 Radius 0.2 }
+G_Baloon{ Translation  0.500 0.900 -0.866 Radius 0.2 }
+G_Baloon{ Translation  0.174 0.900 -0.985 Radius 0.2 }
+G_Baloon{ Translation -0.174 0.900 -0.985 Radius 0.2 }
+G_Baloon{ Translation -0.500 0.900 -0.866 Radius 0.2 }
+G_Baloon{ Translation -0.766 0.900 -0.643 Radius 0.2 }
+G_Baloon{ Translation -0.940 0.900 -0.342 Radius 0.2 }
+G_Baloon{ Translation -1.000 0.900  0.000 Radius 0.2 }
+G_Baloon{ Translation -0.940 0.900  0.342 Radius 0.2 }
+W_Baloon{ Translation -0.766 0.900  0.643 Radius 0.2 }
+W_Baloon{ Translation -0.500 0.900  0.866 Radius 0.2 }
+W_Baloon{ Translation -0.174 0.900  0.985 Radius 0.2 }
+# 五段目（くびわ）
+R_Baloon{ Translation  0.139  1.150  0.788  Radius 0.15 }
+R_Baloon{ Translation  0.400  1.150  0.693  Radius 0.15 }
+R_Baloon{ Translation  0.613  1.150  0.514  Radius 0.15 }
+R_Baloon{ Translation  0.752  1.150  0.274  Radius 0.15 }
+R_Baloon{ Translation  0.800  1.150  0.000  Radius 0.15 }
+R_Baloon{ Translation  0.752  1.150 -0.274  Radius 0.15 }
+R_Baloon{ Translation  0.613  1.150 -0.514  Radius 0.15 }
+R_Baloon{ Translation  0.400  1.150 -0.693  Radius 0.15 }
+R_Baloon{ Translation  0.139  1.150 -0.788  Radius 0.15 }
+R_Baloon{ Translation -0.139  1.150 -0.788  Radius 0.15 }
+R_Baloon{ Translation -0.400  1.150 -0.693  Radius 0.15 }
+R_Baloon{ Translation -0.613  1.150 -0.514  Radius 0.15 }
+R_Baloon{ Translation -0.752  1.150 -0.274  Radius 0.15 }
+R_Baloon{ Translation -0.800  1.150  0.000  Radius 0.15 }
+R_Baloon{ Translation -0.752  1.150  0.274  Radius 0.15 }
+R_Baloon{ Translation -0.613  1.150  0.514  Radius 0.15 }
+R_Baloon{ Translation -0.400  1.150  0.693  Radius 0.15 }
+R_Baloon{ Translation -0.139  1.150  0.788  Radius 0.15 }
+# 六段目
+W_Baloon{ Translation  0.174 1.400  0.985 Radius 0.2 }
+W_Baloon{ Translation  0.500 1.400  0.866 Radius 0.2 }
+W_Baloon{ Translation  0.766 1.400  0.643 Radius 0.2 }
+G_Baloon{ Translation  0.940 1.400  0.342 Radius 0.2 }
+G_Baloon{ Translation  1.000 1.400  0.000 Radius 0.2 }
+G_Baloon{ Translation  0.940 1.400 -0.342 Radius 0.2 }
+G_Baloon{ Translation  0.766 1.400 -0.643 Radius 0.2 }
+G_Baloon{ Translation  0.500 1.400 -0.866 Radius 0.2 }
+G_Baloon{ Translation  0.174 1.400 -0.985 Radius 0.2 }
+G_Baloon{ Translation -0.174 1.400 -0.985 Radius 0.2 }
+G_Baloon{ Translation -0.500 1.400 -0.866 Radius 0.2 }
+G_Baloon{ Translation -0.766 1.400 -0.643 Radius 0.2 }
+G_Baloon{ Translation -0.940 1.400 -0.342 Radius 0.2 }
+G_Baloon{ Translation -1.000 1.400  0.000 Radius 0.2 }
+G_Baloon{ Translation -0.940 1.400  0.342 Radius 0.2 }
+W_Baloon{ Translation -0.766 1.400  0.643 Radius 0.2 }
+W_Baloon{ Translation -0.500 1.400  0.866 Radius 0.2 }
+W_Baloon{ Translation -0.174 1.400  0.985 Radius 0.2 }
+# 七段目（ひげ）
+L_whiskers_Baloon{ Translation  0.174 1.800  0.985 Radius 0.3 }
+W_Baloon{ Translation  0.500 1.800  0.866 Radius 0.3 }
+W_Baloon{ Translation  0.766 1.800  0.643 Radius 0.3 }
+G_Baloon{ Translation  0.940 1.800  0.342 Radius 0.3 }
+G_Baloon{ Translation  1.000 1.800  0.000 Radius 0.3 }
+G_Baloon{ Translation  0.940 1.800 -0.342 Radius 0.3 }
+G_Baloon{ Translation  0.766 1.800 -0.643 Radius 0.3 }
+G_Baloon{ Translation  0.500 1.800 -0.866 Radius 0.3 }
+G_Baloon{ Translation  0.174 1.800 -0.985 Radius 0.3 }
+G_Baloon{ Translation -0.174 1.800 -0.985 Radius 0.3 }
+G_Baloon{ Translation -0.500 1.800 -0.866 Radius 0.3 }
+G_Baloon{ Translation -0.766 1.800 -0.643 Radius 0.3 }
+G_Baloon{ Translation -0.940 1.800 -0.342 Radius 0.3 }
+G_Baloon{ Translation -1.000 1.800  0.000 Radius 0.3 }
+G_Baloon{ Translation -0.940 1.800  0.342 Radius 0.3 }
+W_Baloon{ Translation -0.766 1.800  0.643 Radius 0.3 }
+W_Baloon{ Translation -0.500 1.800  0.866 Radius 0.3 }
+R_whiskers_Baloon{ Translation -0.174 1.800  0.985 Radius 0.3 }
+# 七段目半（鼻）
+R_Baloon{ Translation  0.000 2.000  1.200 Radius 0.1 }
+# 八段目（目）
+Eye_Baloon{ Translation  0.174 2.200  0.985 Radius 0.3 }
+W_Baloon{ Translation  0.500 2.200  0.866 Radius 0.3 }
+W_Baloon{ Translation  0.766 2.200  0.643 Radius 0.3 }
+G_Baloon{ Translation  0.940 2.200  0.342 Radius 0.3 }
+G_Baloon{ Translation  1.000 2.200  0.000 Radius 0.3 }
+G_Baloon{ Translation  0.940 2.200 -0.342 Radius 0.3 }
+G_Baloon{ Translation  0.766 2.200 -0.643 Radius 0.3 }
+G_Baloon{ Translation  0.500 2.200 -0.866 Radius 0.3 }
+G_Baloon{ Translation  0.174 2.200 -0.985 Radius 0.3 }
+G_Baloon{ Translation -0.174 2.200 -0.985 Radius 0.3 }
+G_Baloon{ Translation -0.500 2.200 -0.866 Radius 0.3 }
+G_Baloon{ Translation -0.766 2.200 -0.643 Radius 0.3 }
+G_Baloon{ Translation -0.940 2.200 -0.342 Radius 0.3 }
+G_Baloon{ Translation -1.000 2.200  0.000 Radius 0.3 }
+G_Baloon{ Translation -0.940 2.200  0.342 Radius 0.3 }
+W_Baloon{ Translation -0.766 2.200  0.643 Radius 0.3 }
+W_Baloon{ Translation -0.500 2.200  0.866 Radius 0.3 }
+Eye_Baloon{ Translation -0.174 2.200  0.985 Radius 0.3 }
+# 九段目
+G_Baloon{ Translation  0.181 2.600  0.676 Radius 0.3 }
+G_Baloon{ Translation  0.495 2.600  0.495 Radius 0.3 }
+G_Baloon{ Translation  0.676 2.600  0.181 Radius 0.3 }
+G_Baloon{ Translation  0.676 2.600 -0.181 Radius 0.3 }
+G_Baloon{ Translation  0.495 2.600 -0.495 Radius 0.3 }
+G_Baloon{ Translation  0.181 2.600 -0.676 Radius 0.3 }
+G_Baloon{ Translation -0.181 2.600 -0.676 Radius 0.3 }
+G_Baloon{ Translation -0.495 2.600 -0.495 Radius 0.3 }
+G_Baloon{ Translation -0.676 2.600 -0.181 Radius 0.3 }
+G_Baloon{ Translation -0.676 2.600  0.181 Radius 0.3 }
+G_Baloon{ Translation -0.495 2.600  0.495 Radius 0.3 }
+G_Baloon{ Translation -0.181 2.600  0.676 Radius 0.3 }
