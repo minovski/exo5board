@@ -1,38 +1,38 @@
 # exo5board
 
-<pre>
 
-ざれごと：
+
+## ざれごと
+
 ちょこっと3Dモデリングっぽいものを作ってみたかったのでやってみました。
 要素技術は、未来的技術からトレンドになることなくいつの間にか過去の技術になったVRMLです。
 
-いるもの：
-前はWEBブラウザ（＋プラグイン）でも見られたような気がするのですが、
-ちょっと探した限りではそれらしいものは見つからなかったので、専用ブラウザが
-必要であるように思われます。
+## いるもの
+
+前はWEBブラウザ（＋プラグイン）でも見られたような気がするのですが、ちょっと探した限りではそれらしいものは見つからなかったので、専用ブラウザが必要であるように思われます。
 私は「FreeWRL VRML/X3D browser」を使用しましたが、「Cortona3D」もよさそうです。
 
-ないよう：
-/ + enlighmon.0922.wrl  VRMLコード本体：暫定モデリングのみ
-  + enlighmon.0926.wrl  VRMLコード本体：リリース１（新世界）
-  + enlighmon.1003.wrl  VRMLコード本体：リリース２（太陽の塔）
-  + enlighmon.wrl       VRMLコード本体：リリース３（道頓堀）
-  + img/                画像（テクスチャ）配置用ディレクトリ
-     + eye.png          顔バーツ：目
-     + eye2.png         顔バーツ：目
-     + l_whiskers.png   顔バーツ：左ひげ
-     + l_whiskers2.png  顔バーツ：左ひげ
-     + r_whiskers.png   顔バーツ：右ひげ
-     + r_whiskers2.png  顔バーツ：右ひげ
-     + doutonbori.jpg   背景（道頓堀）
-     + new_world.jpg    背景（新世界）
-     + tower_of_sun.jpg 背景（太陽の塔）
-     + （それ以外は文字）
+## ないよう
 
-そのほか：
+/ ┬ enlighmon.0922.wrl  VRMLコード本体：暫定モデリングのみ
+  ├ enlighmon.0926.wrl  VRMLコード本体：リリース１（新世界）
+  ├ enlighmon.1003.wrl  VRMLコード本体：リリース２（太陽の塔）
+  ├ enlighmon.wrl       VRMLコード本体：リリース３（道頓堀）
+  └ img/                画像（テクスチャ）配置用ディレクトリ
+     ├ eye.png          顔バーツ：目
+     ├ eye2.png         顔バーツ：目
+     ├ l_whiskers.png   顔バーツ：左ひげ
+     ├ l_whiskers2.png  顔バーツ：左ひげ
+     ├ r_whiskers.png   顔バーツ：右ひげ
+     ├ r_whiskers2.png  顔バーツ：右ひげ
+     ├ doutonbori.jpg   背景（道頓堀）
+     ├ new_world.jpg    背景（新世界）
+     ├ tower_of_sun.jpg 背景（太陽の塔）
+     └ （それ以外は文字）
+
+## そのほか
+
 VRMLでは背景を表現するのにBackgroundノードを用います。本来は。
 ただ、やってみたもののうまくいかなかったので代わりにBillboardノードを使用しました。
 よって、背景にみえるものは実は大道具（観光地アリバイ写真に用いるアレみたいな）です。
 そのうちリトライしてみたいような、めんどくさいような。
-
-</pre>
